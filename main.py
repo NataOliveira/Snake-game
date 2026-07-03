@@ -6,8 +6,8 @@ from random import randint
 pygame.init()
 pygame.display.set_caption('Snake')
 
-largura = 640
-altura = 480
+largura = 1024
+altura = 800
 x_cobra = (largura/2) - 15
 y_cobra = (altura/2) - 15
 x_controle = 20
