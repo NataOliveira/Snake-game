@@ -6,8 +6,8 @@ from random import randint
 pygame.init()
 pygame.display.set_caption('Snake')
 
-largura = 1024
-altura = 800
+largura = 800
+altura = 600
 x_cobra = (largura/2) - 15
 y_cobra = (altura/2) - 15
 x_controle = 20
@@ -39,8 +39,8 @@ def reiniciar_jogo():
     y_cobra = (altura/2) - 15
     lista_cobra = []
     lista_cabeca = []
-    x_comida = randint(30, largura)
-    y_comida = randint(30, altura)
+    x_comida = randint(30, largura -20)
+    y_comida = randint(30, altura -20)
     velocidade = 10
     morreu = False
 
@@ -122,7 +122,7 @@ while True:
     if len(lista_cobra) > tamanho_cobra:
         del lista_cobra[0]
 
-    tela.blit(texto_pontos, (460, 30))
+    tela.blit(texto_pontos, (620, 30))
     comida = pygame.draw.circle(tela, (200, 20, 20), (x_comida + 10, y_comida + 10), 10)
     pygame.draw.rect(tela, (0, 150, 0), (x_comida + 8, y_comida - 4, 4, 6))
 
